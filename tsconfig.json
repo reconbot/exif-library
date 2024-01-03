@@ -1,18 +1,22 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "rootDir": "src",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "ESNext",
-    "target": "es2019",
-    "declaration": true,
-    "esModuleInterop": true
+    "allowJs": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "target": "es2017",
+    "useUnknownInCatchVariables": false,
   },
   "include": [
-    "src/*"
+    "lib/**/*.ts",
   ],
   "exclude": [
-    "node_modules"
-  ],
+    "node_modules",
+    "lib/*-test.ts"
+  ]
 }

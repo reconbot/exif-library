@@ -1,59 +1,49 @@
 {
-  "name": "exif-library",
-  "version": "3.0.0-alpha.0",
-  "description": "Read and write exif.",
-  "main": "dist/exif-library.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist/exif-library.js",
-    "dist/exif-library.js.map",
-    "dist/*.d.ts",
-    "LICENSE.txt",
-    "README.md",
-    "package.json"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hMatoba/exif-library.git"
+  "name": "@reconbot/exif-library",
+  "version": "0.0.0-development",
+  "description": "A nodejs library for reading and writing exif on images",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "exports": {
+    "require": "./dist/index.js",
+    "default": "./dist/index-esm.mjs"
+  },
+  "packageManager": "pnpm@8.14.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": "git@github.com:reconbot/exif-library.git",
+  "homepage": "https://github.com/reconbot/exif-library",
+  "scripts": {
+    "test": "node -r esbuild-register --test tests/*.test.ts",
+    "lint": "tsc && eslint lib/**/*.ts",
+    "format": "eslint lib/**/*.ts --fix",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && rollup -c && node bundle-types.mjs",
+    "prepublishOnly": "npm run build",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "jpeg",
     "exif",
-    "node",
-    "browser"
+    "node"
   ],
-  "scripts": {
-    "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint \"*/**/*.ts\"",
-    "lint-auto-fix": "eslint \"*/**/*.ts\" --fix",
-    "test": "jest --config=jest.node.config.js",
-    "build": "rollup -c --bundleConfigAsCjs",
-    "build:watch": "rollup -cw",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A",
-    "postversion": "git push && git push --tags"
-  },
-  "author": "hMatoba, Joachim Holwech",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hMatoba/exif-library/issues"
-  },
-  "homepage": "https://github.com/hMatoba/exif-library",
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^8.44.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-prettier": "^5.0.0-alpha.2",
-    "jest": "^29.6.1",
-    "jpeg-js": "^0.4.0",
-    "prettier": "^3.0.0",
-    "rollup": "^3.26.1",
-    "rollup-plugin-eslint": "^7.0.0",
-    "rollup-plugin-typescript": "^1.0.1",
-    "typescript": "^5.1.6"
+    "@rollup/plugin-commonjs": "25.0.7",
+    "@rollup/plugin-node-resolve": "15.2.3",
+    "@rollup/plugin-typescript": "11.1.5",
+    "@types/node": "20.10.6",
+    "@typescript-eslint/eslint-plugin": "6.17.0",
+    "@typescript-eslint/parser": "6.17.0",
+    "dts-buddy": "0.2.4",
+    "esbuild": "0.19.11",
+    "esbuild-register": "3.5.0",
+    "eslint": "8.56.0",
+    "jpeg-js": "^0.4.4",
+    "rollup": "4.9.2",
+    "semantic-release": "22.0.12",
+    "tslib": "2.6.2",
+    "typescript": "5.3.3"
   }
 }

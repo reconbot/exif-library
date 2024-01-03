@@ -1,34 +1,9 @@
-exif-library
-============
+# @reconbot/exif-library
 
-Exif library in JavaScript. Read and Modify exif.
+A nice fork of [exif-library](https://github.com/hMatoba/exif-library) for my own uses. I've dropped browser support and changed the api and migrated to my own build system.
 
-**Node.js**                                                                                                        |**browser**
--------------------------------------------------------------------------------------------------------------------|-----------
-[![Build Status](https://travis-ci.com/hMatoba/exif-library.svg?branch=master)](https://travis-ci.com/hMatoba/exif-library)|[![CircleCI](https://circleci.com/gh/hMatoba/exif-library.svg?style=svg)](https://circleci.com/gh/hMatoba/exif-library)
+[![Release](https://github.com/reconbot/exif-library/actions/workflows/test.yml/badge.svg)](https://github.com/reconbot/exif-library/actions/workflows/test.yml)
 
-How to Use
-----------
+## Guide
 
-[Read the Docs](https://piexifjs.readthedocs.io/en/2.0/index.html)
-
-Dependency
-----------
-
-No dependency. exif-library just needs standard JavaScript environment.
-
-Environment
------------
-
-Both client-side and server-side. exif-library is transpiled as Universal Module Definition(https://github.com/umdjs/umd).
-
-Issues
-------
-
-Give me details. Environment, code, input, output and etc.
-
-License
--------
-
-This software is released under the MIT License, see LICENSE.txt.
-
+- Set the repo secret `NPM_TOKEN` before your first push so that you can publish to npm.

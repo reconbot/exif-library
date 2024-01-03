@@ -1,1162 +1,1162 @@
-import { Types, ITags, ITagNumbers } from "./interfaces";
+import { Types, ITags, ITagNumbers } from './interfaces'
 
 export const TypeNumbers: { [key: number]: string } = {
-  1: "Byte",
-  2: "Ascii",
-  3: "Short",
-  4: "Long",
-  5: "Rational",
-  7: "Undefined",
-  9: "SLong",
-  10: "SRational",
-};
+  1: 'Byte',
+  2: 'Ascii',
+  3: 'Short',
+  4: 'Long',
+  5: 'Rational',
+  7: 'Undefined',
+  9: 'SLong',
+  10: 'SRational',
+}
 
 const ImageTagElement = {
   11: {
-    name: "ProcessingSoftware",
+    name: 'ProcessingSoftware',
     type: Types.Ascii,
   },
   254: {
-    name: "NewSubfileType",
+    name: 'NewSubfileType',
     type: Types.Long,
   },
   255: {
-    name: "SubfileType",
+    name: 'SubfileType',
     type: Types.Short,
   },
   256: {
-    name: "ImageWidth",
+    name: 'ImageWidth',
     type: Types.Long,
   },
   257: {
-    name: "ImageLength",
+    name: 'ImageLength',
     type: Types.Long,
   },
   258: {
-    name: "BitsPerSample",
+    name: 'BitsPerSample',
     type: Types.Short,
   },
   259: {
-    name: "Compression",
+    name: 'Compression',
     type: Types.Short,
   },
   262: {
-    name: "PhotometricInterpretation",
+    name: 'PhotometricInterpretation',
     type: Types.Short,
   },
   263: {
-    name: "Threshholding",
+    name: 'Threshholding',
     type: Types.Short,
   },
   264: {
-    name: "CellWidth",
+    name: 'CellWidth',
     type: Types.Short,
   },
   265: {
-    name: "CellLength",
+    name: 'CellLength',
     type: Types.Short,
   },
   266: {
-    name: "FillOrder",
+    name: 'FillOrder',
     type: Types.Short,
   },
   269: {
-    name: "DocumentName",
+    name: 'DocumentName',
     type: Types.Ascii,
   },
   270: {
-    name: "ImageDescription",
+    name: 'ImageDescription',
     type: Types.Ascii,
   },
   271: {
-    name: "Make",
+    name: 'Make',
     type: Types.Ascii,
   },
   272: {
-    name: "Model",
+    name: 'Model',
     type: Types.Ascii,
   },
   273: {
-    name: "StripOffsets",
+    name: 'StripOffsets',
     type: Types.Long,
   },
   274: {
-    name: "Orientation",
+    name: 'Orientation',
     type: Types.Short,
   },
   277: {
-    name: "SamplesPerPixel",
+    name: 'SamplesPerPixel',
     type: Types.Short,
   },
   278: {
-    name: "RowsPerStrip",
+    name: 'RowsPerStrip',
     type: Types.Long,
   },
   279: {
-    name: "StripByteCounts",
+    name: 'StripByteCounts',
     type: Types.Long,
   },
   282: {
-    name: "XResolution",
+    name: 'XResolution',
     type: Types.Rational,
   },
   283: {
-    name: "YResolution",
+    name: 'YResolution',
     type: Types.Rational,
   },
   284: {
-    name: "PlanarConfiguration",
+    name: 'PlanarConfiguration',
     type: Types.Short,
   },
   290: {
-    name: "GrayResponseUnit",
+    name: 'GrayResponseUnit',
     type: Types.Short,
   },
   291: {
-    name: "GrayResponseCurve",
+    name: 'GrayResponseCurve',
     type: Types.Short,
   },
   292: {
-    name: "T4Options",
+    name: 'T4Options',
     type: Types.Long,
   },
   293: {
-    name: "T6Options",
+    name: 'T6Options',
     type: Types.Long,
   },
   296: {
-    name: "ResolutionUnit",
+    name: 'ResolutionUnit',
     type: Types.Short,
   },
   301: {
-    name: "TransferFunction",
+    name: 'TransferFunction',
     type: Types.Short,
   },
   305: {
-    name: "Software",
+    name: 'Software',
     type: Types.Ascii,
   },
   306: {
-    name: "DateTime",
+    name: 'DateTime',
     type: Types.Ascii,
   },
   315: {
-    name: "Artist",
+    name: 'Artist',
     type: Types.Ascii,
   },
   316: {
-    name: "HostComputer",
+    name: 'HostComputer',
     type: Types.Ascii,
   },
   317: {
-    name: "Predictor",
+    name: 'Predictor',
     type: Types.Short,
   },
   318: {
-    name: "WhitePoint",
+    name: 'WhitePoint',
     type: Types.Rational,
   },
   319: {
-    name: "PrimaryChromaticities",
+    name: 'PrimaryChromaticities',
     type: Types.Rational,
   },
   320: {
-    name: "ColorMap",
+    name: 'ColorMap',
     type: Types.Short,
   },
   321: {
-    name: "HalftoneHints",
+    name: 'HalftoneHints',
     type: Types.Short,
   },
   322: {
-    name: "TileWidth",
+    name: 'TileWidth',
     type: Types.Short,
   },
   323: {
-    name: "TileLength",
+    name: 'TileLength',
     type: Types.Short,
   },
   324: {
-    name: "TileOffsets",
+    name: 'TileOffsets',
     type: Types.Short,
   },
   325: {
-    name: "TileByteCounts",
+    name: 'TileByteCounts',
     type: Types.Short,
   },
   330: {
-    name: "SubIFDs",
+    name: 'SubIFDs',
     type: Types.Long,
   },
   332: {
-    name: "InkSet",
+    name: 'InkSet',
     type: Types.Short,
   },
   333: {
-    name: "InkNames",
+    name: 'InkNames',
     type: Types.Ascii,
   },
   334: {
-    name: "NumberOfInks",
+    name: 'NumberOfInks',
     type: Types.Short,
   },
   336: {
-    name: "DotRange",
+    name: 'DotRange',
     type: Types.Byte,
   },
   337: {
-    name: "TargetPrinter",
+    name: 'TargetPrinter',
     type: Types.Ascii,
   },
   338: {
-    name: "ExtraSamples",
+    name: 'ExtraSamples',
     type: Types.Short,
   },
   339: {
-    name: "SampleFormat",
+    name: 'SampleFormat',
     type: Types.Short,
   },
   340: {
-    name: "SMinSampleValue",
+    name: 'SMinSampleValue',
     type: Types.Short,
   },
   341: {
-    name: "SMaxSampleValue",
+    name: 'SMaxSampleValue',
     type: Types.Short,
   },
   342: {
-    name: "TransferRange",
+    name: 'TransferRange',
     type: Types.Short,
   },
   343: {
-    name: "ClipPath",
+    name: 'ClipPath',
     type: Types.Byte,
   },
   344: {
-    name: "XClipPathUnits",
+    name: 'XClipPathUnits',
     type: Types.Long,
   },
   345: {
-    name: "YClipPathUnits",
+    name: 'YClipPathUnits',
     type: Types.Long,
   },
   346: {
-    name: "Indexed",
+    name: 'Indexed',
     type: Types.Short,
   },
   347: {
-    name: "JPEGTables",
+    name: 'JPEGTables',
     type: Types.Undefined,
   },
   351: {
-    name: "OPIProxy",
+    name: 'OPIProxy',
     type: Types.Short,
   },
   512: {
-    name: "JPEGProc",
+    name: 'JPEGProc',
     type: Types.Long,
   },
   513: {
-    name: "JPEGInterchangeFormat",
+    name: 'JPEGInterchangeFormat',
     type: Types.Long,
   },
   514: {
-    name: "JPEGInterchangeFormatLength",
+    name: 'JPEGInterchangeFormatLength',
     type: Types.Long,
   },
   515: {
-    name: "JPEGRestartInterval",
+    name: 'JPEGRestartInterval',
     type: Types.Short,
   },
   517: {
-    name: "JPEGLosslessPredictors",
+    name: 'JPEGLosslessPredictors',
     type: Types.Short,
   },
   518: {
-    name: "JPEGPointTransforms",
+    name: 'JPEGPointTransforms',
     type: Types.Short,
   },
   519: {
-    name: "JPEGQTables",
+    name: 'JPEGQTables',
     type: Types.Long,
   },
   520: {
-    name: "JPEGDCTables",
+    name: 'JPEGDCTables',
     type: Types.Long,
   },
   521: {
-    name: "JPEGACTables",
+    name: 'JPEGACTables',
     type: Types.Long,
   },
   529: {
-    name: "YCbCrCoefficients",
+    name: 'YCbCrCoefficients',
     type: Types.Rational,
   },
   530: {
-    name: "YCbCrSubSampling",
+    name: 'YCbCrSubSampling',
     type: Types.Short,
   },
   531: {
-    name: "YCbCrPositioning",
+    name: 'YCbCrPositioning',
     type: Types.Short,
   },
   532: {
-    name: "ReferenceBlackWhite",
+    name: 'ReferenceBlackWhite',
     type: Types.Rational,
   },
   700: {
-    name: "XMLPacket",
+    name: 'XMLPacket',
     type: Types.Byte,
   },
   18246: {
-    name: "Rating",
+    name: 'Rating',
     type: Types.Short,
   },
   18249: {
-    name: "RatingPercent",
+    name: 'RatingPercent',
     type: Types.Short,
   },
   32781: {
-    name: "ImageID",
+    name: 'ImageID',
     type: Types.Ascii,
   },
   33421: {
-    name: "CFARepeatPatternDim",
+    name: 'CFARepeatPatternDim',
     type: Types.Short,
   },
   33422: {
-    name: "CFAPattern",
+    name: 'CFAPattern',
     type: Types.Byte,
   },
   33423: {
-    name: "BatteryLevel",
+    name: 'BatteryLevel',
     type: Types.Rational,
   },
   33432: {
-    name: "Copyright",
+    name: 'Copyright',
     type: Types.Ascii,
   },
   33434: {
-    name: "ExposureTime",
+    name: 'ExposureTime',
     type: Types.Rational,
   },
   34377: {
-    name: "ImageResources",
+    name: 'ImageResources',
     type: Types.Byte,
   },
   34665: {
-    name: "ExifTag",
+    name: 'ExifTag',
     type: Types.Long,
   },
   34675: {
-    name: "InterColorProfile",
+    name: 'InterColorProfile',
     type: Types.Undefined,
   },
   34853: {
-    name: "GPSTag",
+    name: 'GPSTag',
     type: Types.Long,
   },
   34857: {
-    name: "Interlace",
+    name: 'Interlace',
     type: Types.Short,
   },
   34858: {
-    name: "TimeZoneOffset",
+    name: 'TimeZoneOffset',
     type: Types.Long,
   },
   34859: {
-    name: "SelfTimerMode",
+    name: 'SelfTimerMode',
     type: Types.Short,
   },
   37387: {
-    name: "FlashEnergy",
+    name: 'FlashEnergy',
     type: Types.Rational,
   },
   37388: {
-    name: "SpatialFrequencyResponse",
+    name: 'SpatialFrequencyResponse',
     type: Types.Undefined,
   },
   37389: {
-    name: "Noise",
+    name: 'Noise',
     type: Types.Undefined,
   },
   37390: {
-    name: "FocalPlaneXResolution",
+    name: 'FocalPlaneXResolution',
     type: Types.Rational,
   },
   37391: {
-    name: "FocalPlaneYResolution",
+    name: 'FocalPlaneYResolution',
     type: Types.Rational,
   },
   37392: {
-    name: "FocalPlaneResolutionUnit",
+    name: 'FocalPlaneResolutionUnit',
     type: Types.Short,
   },
   37393: {
-    name: "ImageNumber",
+    name: 'ImageNumber',
     type: Types.Long,
   },
   37394: {
-    name: "SecurityClassification",
+    name: 'SecurityClassification',
     type: Types.Ascii,
   },
   37395: {
-    name: "ImageHistory",
+    name: 'ImageHistory',
     type: Types.Ascii,
   },
   37397: {
-    name: "ExposureIndex",
+    name: 'ExposureIndex',
     type: Types.Rational,
   },
   37398: {
-    name: "TIFFEPStandardID",
+    name: 'TIFFEPStandardID',
     type: Types.Byte,
   },
   37399: {
-    name: "SensingMethod",
+    name: 'SensingMethod',
     type: Types.Short,
   },
   40091: {
-    name: "XPTitle",
+    name: 'XPTitle',
     type: Types.Byte,
   },
   40092: {
-    name: "XPComment",
+    name: 'XPComment',
     type: Types.Byte,
   },
   40093: {
-    name: "XPAuthor",
+    name: 'XPAuthor',
     type: Types.Byte,
   },
   40094: {
-    name: "XPKeywords",
+    name: 'XPKeywords',
     type: Types.Byte,
   },
   40095: {
-    name: "XPSubject",
+    name: 'XPSubject',
     type: Types.Byte,
   },
   50341: {
-    name: "PrintImageMatching",
+    name: 'PrintImageMatching',
     type: Types.Undefined,
   },
   50706: {
-    name: "DNGVersion",
+    name: 'DNGVersion',
     type: Types.Byte,
   },
   50707: {
-    name: "DNGBackwardVersion",
+    name: 'DNGBackwardVersion',
     type: Types.Byte,
   },
   50708: {
-    name: "UniqueCameraModel",
+    name: 'UniqueCameraModel',
     type: Types.Ascii,
   },
   50709: {
-    name: "LocalizedCameraModel",
+    name: 'LocalizedCameraModel',
     type: Types.Byte,
   },
   50710: {
-    name: "CFAPlaneColor",
+    name: 'CFAPlaneColor',
     type: Types.Byte,
   },
   50711: {
-    name: "CFALayout",
+    name: 'CFALayout',
     type: Types.Short,
   },
   50712: {
-    name: "LinearizationTable",
+    name: 'LinearizationTable',
     type: Types.Short,
   },
   50713: {
-    name: "BlackLevelRepeatDim",
+    name: 'BlackLevelRepeatDim',
     type: Types.Short,
   },
   50714: {
-    name: "BlackLevel",
+    name: 'BlackLevel',
     type: Types.Rational,
   },
   50715: {
-    name: "BlackLevelDeltaH",
+    name: 'BlackLevelDeltaH',
     type: Types.SRational,
   },
   50716: {
-    name: "BlackLevelDeltaV",
+    name: 'BlackLevelDeltaV',
     type: Types.SRational,
   },
   50717: {
-    name: "WhiteLevel",
+    name: 'WhiteLevel',
     type: Types.Short,
   },
   50718: {
-    name: "DefaultScale",
+    name: 'DefaultScale',
     type: Types.Rational,
   },
   50719: {
-    name: "DefaultCropOrigin",
+    name: 'DefaultCropOrigin',
     type: Types.Short,
   },
   50720: {
-    name: "DefaultCropSize",
+    name: 'DefaultCropSize',
     type: Types.Short,
   },
   50721: {
-    name: "ColorMatrix1",
+    name: 'ColorMatrix1',
     type: Types.SRational,
   },
   50722: {
-    name: "ColorMatrix2",
+    name: 'ColorMatrix2',
     type: Types.SRational,
   },
   50723: {
-    name: "CameraCalibration1",
+    name: 'CameraCalibration1',
     type: Types.SRational,
   },
   50724: {
-    name: "CameraCalibration2",
+    name: 'CameraCalibration2',
     type: Types.SRational,
   },
   50725: {
-    name: "ReductionMatrix1",
+    name: 'ReductionMatrix1',
     type: Types.SRational,
   },
   50726: {
-    name: "ReductionMatrix2",
+    name: 'ReductionMatrix2',
     type: Types.SRational,
   },
   50727: {
-    name: "AnalogBalance",
+    name: 'AnalogBalance',
     type: Types.Rational,
   },
   50728: {
-    name: "AsShotNeutral",
+    name: 'AsShotNeutral',
     type: Types.Short,
   },
   50729: {
-    name: "AsShotWhiteXY",
+    name: 'AsShotWhiteXY',
     type: Types.Rational,
   },
   50730: {
-    name: "BaselineExposure",
+    name: 'BaselineExposure',
     type: Types.SRational,
   },
   50731: {
-    name: "BaselineNoise",
+    name: 'BaselineNoise',
     type: Types.Rational,
   },
   50732: {
-    name: "BaselineSharpness",
+    name: 'BaselineSharpness',
     type: Types.Rational,
   },
   50733: {
-    name: "BayerGreenSplit",
+    name: 'BayerGreenSplit',
     type: Types.Long,
   },
   50734: {
-    name: "LinearResponseLimit",
+    name: 'LinearResponseLimit',
     type: Types.Rational,
   },
   50735: {
-    name: "CameraSerialNumber",
+    name: 'CameraSerialNumber',
     type: Types.Ascii,
   },
   50736: {
-    name: "LensInfo",
+    name: 'LensInfo',
     type: Types.Rational,
   },
   50737: {
-    name: "ChromaBlurRadius",
+    name: 'ChromaBlurRadius',
     type: Types.Rational,
   },
   50738: {
-    name: "AntiAliasStrength",
+    name: 'AntiAliasStrength',
     type: Types.Rational,
   },
   50739: {
-    name: "ShadowScale",
+    name: 'ShadowScale',
     type: Types.SRational,
   },
   50740: {
-    name: "DNGPrivateData",
+    name: 'DNGPrivateData',
     type: Types.Byte,
   },
   50741: {
-    name: "MakerNoteSafety",
+    name: 'MakerNoteSafety',
     type: Types.Short,
   },
   50778: {
-    name: "CalibrationIlluminant1",
+    name: 'CalibrationIlluminant1',
     type: Types.Short,
   },
   50779: {
-    name: "CalibrationIlluminant2",
+    name: 'CalibrationIlluminant2',
     type: Types.Short,
   },
   50780: {
-    name: "BestQualityScale",
+    name: 'BestQualityScale',
     type: Types.Rational,
   },
   50781: {
-    name: "RawDataUniqueID",
+    name: 'RawDataUniqueID',
     type: Types.Byte,
   },
   50827: {
-    name: "OriginalRawFileName",
+    name: 'OriginalRawFileName',
     type: Types.Byte,
   },
   50828: {
-    name: "OriginalRawFileData",
+    name: 'OriginalRawFileData',
     type: Types.Undefined,
   },
   50829: {
-    name: "ActiveArea",
+    name: 'ActiveArea',
     type: Types.Short,
   },
   50830: {
-    name: "MaskedAreas",
+    name: 'MaskedAreas',
     type: Types.Short,
   },
   50831: {
-    name: "AsShotICCProfile",
+    name: 'AsShotICCProfile',
     type: Types.Undefined,
   },
   50832: {
-    name: "AsShotPreProfileMatrix",
+    name: 'AsShotPreProfileMatrix',
     type: Types.SRational,
   },
   50833: {
-    name: "CurrentICCProfile",
+    name: 'CurrentICCProfile',
     type: Types.Undefined,
   },
   50834: {
-    name: "CurrentPreProfileMatrix",
+    name: 'CurrentPreProfileMatrix',
     type: Types.SRational,
   },
   50879: {
-    name: "ColorimetricReference",
+    name: 'ColorimetricReference',
     type: Types.Short,
   },
   50931: {
-    name: "CameraCalibrationSignature",
+    name: 'CameraCalibrationSignature',
     type: Types.Byte,
   },
   50932: {
-    name: "ProfileCalibrationSignature",
+    name: 'ProfileCalibrationSignature',
     type: Types.Byte,
   },
   50934: {
-    name: "AsShotProfileName",
+    name: 'AsShotProfileName',
     type: Types.Byte,
   },
   50935: {
-    name: "NoiseReductionApplied",
+    name: 'NoiseReductionApplied',
     type: Types.Rational,
   },
   50936: {
-    name: "ProfileName",
+    name: 'ProfileName',
     type: Types.Byte,
   },
   50937: {
-    name: "ProfileHueSatMapDims",
+    name: 'ProfileHueSatMapDims',
     type: Types.Long,
   },
   50941: {
-    name: "ProfileEmbedPolicy",
+    name: 'ProfileEmbedPolicy',
     type: Types.Long,
   },
   50942: {
-    name: "ProfileCopyright",
+    name: 'ProfileCopyright',
     type: Types.Byte,
   },
   50964: {
-    name: "ForwardMatrix1",
+    name: 'ForwardMatrix1',
     type: Types.SRational,
   },
   50965: {
-    name: "ForwardMatrix2",
+    name: 'ForwardMatrix2',
     type: Types.SRational,
   },
   50966: {
-    name: "PreviewApplicationName",
+    name: 'PreviewApplicationName',
     type: Types.Byte,
   },
   50967: {
-    name: "PreviewApplicationVersion",
+    name: 'PreviewApplicationVersion',
     type: Types.Byte,
   },
   50968: {
-    name: "PreviewSettingsName",
+    name: 'PreviewSettingsName',
     type: Types.Byte,
   },
   50969: {
-    name: "PreviewSettingsDigest",
+    name: 'PreviewSettingsDigest',
     type: Types.Byte,
   },
   50970: {
-    name: "PreviewColorSpace",
+    name: 'PreviewColorSpace',
     type: Types.Long,
   },
   50971: {
-    name: "PreviewDateTime",
+    name: 'PreviewDateTime',
     type: Types.Ascii,
   },
   50972: {
-    name: "RawImageDigest",
+    name: 'RawImageDigest',
     type: Types.Undefined,
   },
   50973: {
-    name: "OriginalRawFileDigest",
+    name: 'OriginalRawFileDigest',
     type: Types.Undefined,
   },
   50974: {
-    name: "SubTileBlockSize",
+    name: 'SubTileBlockSize',
     type: Types.Long,
   },
   50975: {
-    name: "RowInterleaveFactor",
+    name: 'RowInterleaveFactor',
     type: Types.Long,
   },
   50981: {
-    name: "ProfileLookTableDims",
+    name: 'ProfileLookTableDims',
     type: Types.Long,
   },
   51008: {
-    name: "OpcodeList1",
+    name: 'OpcodeList1',
     type: Types.Undefined,
   },
   51009: {
-    name: "OpcodeList2",
+    name: 'OpcodeList2',
     type: Types.Undefined,
   },
   51022: {
-    name: "OpcodeList3",
+    name: 'OpcodeList3',
     type: Types.Undefined,
   },
-};
+}
 
 export const Tags: ITags = {
   Image: ImageTagElement,
-  "0th": ImageTagElement,
-  "1st": ImageTagElement,
+  '0th': ImageTagElement,
+  '1st': ImageTagElement,
   Exif: {
     33434: {
-      name: "ExposureTime",
+      name: 'ExposureTime',
       type: Types.Rational,
     },
     33437: {
-      name: "FNumber",
+      name: 'FNumber',
       type: Types.Rational,
     },
     34850: {
-      name: "ExposureProgram",
+      name: 'ExposureProgram',
       type: Types.Short,
     },
     34852: {
-      name: "SpectralSensitivity",
+      name: 'SpectralSensitivity',
       type: Types.Ascii,
     },
     34855: {
-      name: "ISOSpeedRatings",
+      name: 'ISOSpeedRatings',
       type: Types.Short,
     },
     34856: {
-      name: "OECF",
+      name: 'OECF',
       type: Types.Undefined,
     },
     34864: {
-      name: "SensitivityType",
+      name: 'SensitivityType',
       type: Types.Short,
     },
     34865: {
-      name: "StandardOutputSensitivity",
+      name: 'StandardOutputSensitivity',
       type: Types.Long,
     },
     34866: {
-      name: "RecommendedExposureIndex",
+      name: 'RecommendedExposureIndex',
       type: Types.Long,
     },
     34867: {
-      name: "ISOSpeed",
+      name: 'ISOSpeed',
       type: Types.Long,
     },
     34868: {
-      name: "ISOSpeedLatitudeyyy",
+      name: 'ISOSpeedLatitudeyyy',
       type: Types.Long,
     },
     34869: {
-      name: "ISOSpeedLatitudezzz",
+      name: 'ISOSpeedLatitudezzz',
       type: Types.Long,
     },
     36864: {
-      name: "ExifVersion",
+      name: 'ExifVersion',
       type: Types.Undefined,
     },
     36867: {
-      name: "DateTimeOriginal",
+      name: 'DateTimeOriginal',
       type: Types.Ascii,
     },
     36868: {
-      name: "DateTimeDigitized",
+      name: 'DateTimeDigitized',
       type: Types.Ascii,
     },
     37121: {
-      name: "ComponentsConfiguration",
+      name: 'ComponentsConfiguration',
       type: Types.Undefined,
     },
     37122: {
-      name: "CompressedBitsPerPixel",
+      name: 'CompressedBitsPerPixel',
       type: Types.Rational,
     },
     37377: {
-      name: "ShutterSpeedValue",
+      name: 'ShutterSpeedValue',
       type: Types.SRational,
     },
     37378: {
-      name: "ApertureValue",
+      name: 'ApertureValue',
       type: Types.Rational,
     },
     37379: {
-      name: "BrightnessValue",
+      name: 'BrightnessValue',
       type: Types.SRational,
     },
     37380: {
-      name: "ExposureBiasValue",
+      name: 'ExposureBiasValue',
       type: Types.SRational,
     },
     37381: {
-      name: "MaxApertureValue",
+      name: 'MaxApertureValue',
       type: Types.Rational,
     },
     37382: {
-      name: "SubjectDistance",
+      name: 'SubjectDistance',
       type: Types.Rational,
     },
     37383: {
-      name: "MeteringMode",
+      name: 'MeteringMode',
       type: Types.Short,
     },
     37384: {
-      name: "LightSource",
+      name: 'LightSource',
       type: Types.Short,
     },
     37385: {
-      name: "Flash",
+      name: 'Flash',
       type: Types.Short,
     },
     37386: {
-      name: "FocalLength",
+      name: 'FocalLength',
       type: Types.Rational,
     },
     37396: {
-      name: "SubjectArea",
+      name: 'SubjectArea',
       type: Types.Short,
     },
     37500: {
-      name: "MakerNote",
+      name: 'MakerNote',
       type: Types.Undefined,
     },
     37510: {
-      name: "UserComment",
+      name: 'UserComment',
       type: Types.Ascii,
     },
     37520: {
-      name: "SubSecTime",
+      name: 'SubSecTime',
       type: Types.Ascii,
     },
     37521: {
-      name: "SubSecTimeOriginal",
+      name: 'SubSecTimeOriginal',
       type: Types.Ascii,
     },
     37522: {
-      name: "SubSecTimeDigitized",
+      name: 'SubSecTimeDigitized',
       type: Types.Ascii,
     },
     40960: {
-      name: "FlashpixVersion",
+      name: 'FlashpixVersion',
       type: Types.Undefined,
     },
     40961: {
-      name: "ColorSpace",
+      name: 'ColorSpace',
       type: Types.Short,
     },
     40962: {
-      name: "PixelXDimension",
+      name: 'PixelXDimension',
       type: Types.Long,
     },
     40963: {
-      name: "PixelYDimension",
+      name: 'PixelYDimension',
       type: Types.Long,
     },
     40964: {
-      name: "RelatedSoundFile",
+      name: 'RelatedSoundFile',
       type: Types.Ascii,
     },
     40965: {
-      name: "InteroperabilityTag",
+      name: 'InteroperabilityTag',
       type: Types.Long,
     },
     41483: {
-      name: "FlashEnergy",
+      name: 'FlashEnergy',
       type: Types.Rational,
     },
     41484: {
-      name: "SpatialFrequencyResponse",
+      name: 'SpatialFrequencyResponse',
       type: Types.Undefined,
     },
     41486: {
-      name: "FocalPlaneXResolution",
+      name: 'FocalPlaneXResolution',
       type: Types.Rational,
     },
     41487: {
-      name: "FocalPlaneYResolution",
+      name: 'FocalPlaneYResolution',
       type: Types.Rational,
     },
     41488: {
-      name: "FocalPlaneResolutionUnit",
+      name: 'FocalPlaneResolutionUnit',
       type: Types.Short,
     },
     41492: {
-      name: "SubjectLocation",
+      name: 'SubjectLocation',
       type: Types.Short,
     },
     41493: {
-      name: "ExposureIndex",
+      name: 'ExposureIndex',
       type: Types.Rational,
     },
     41495: {
-      name: "SensingMethod",
+      name: 'SensingMethod',
       type: Types.Short,
     },
     41728: {
-      name: "FileSource",
+      name: 'FileSource',
       type: Types.Undefined,
     },
     41729: {
-      name: "SceneType",
+      name: 'SceneType',
       type: Types.Undefined,
     },
     41730: {
-      name: "CFAPattern",
+      name: 'CFAPattern',
       type: Types.Undefined,
     },
     41985: {
-      name: "CustomRendered",
+      name: 'CustomRendered',
       type: Types.Short,
     },
     41986: {
-      name: "ExposureMode",
+      name: 'ExposureMode',
       type: Types.Short,
     },
     41987: {
-      name: "WhiteBalance",
+      name: 'WhiteBalance',
       type: Types.Short,
     },
     41988: {
-      name: "DigitalZoomRatio",
+      name: 'DigitalZoomRatio',
       type: Types.Rational,
     },
     41989: {
-      name: "FocalLengthIn35mmFilm",
+      name: 'FocalLengthIn35mmFilm',
       type: Types.Short,
     },
     41990: {
-      name: "SceneCaptureType",
+      name: 'SceneCaptureType',
       type: Types.Short,
     },
     41991: {
-      name: "GainControl",
+      name: 'GainControl',
       type: Types.Short,
     },
     41992: {
-      name: "Contrast",
+      name: 'Contrast',
       type: Types.Short,
     },
     41993: {
-      name: "Saturation",
+      name: 'Saturation',
       type: Types.Short,
     },
     41994: {
-      name: "Sharpness",
+      name: 'Sharpness',
       type: Types.Short,
     },
     41995: {
-      name: "DeviceSettingDescription",
+      name: 'DeviceSettingDescription',
       type: Types.Undefined,
     },
     41996: {
-      name: "SubjectDistanceRange",
+      name: 'SubjectDistanceRange',
       type: Types.Short,
     },
     42016: {
-      name: "ImageUniqueID",
+      name: 'ImageUniqueID',
       type: Types.Ascii,
     },
     42032: {
-      name: "CameraOwnerName",
+      name: 'CameraOwnerName',
       type: Types.Ascii,
     },
     42033: {
-      name: "BodySerialNumber",
+      name: 'BodySerialNumber',
       type: Types.Ascii,
     },
     42034: {
-      name: "LensSpecification",
+      name: 'LensSpecification',
       type: Types.Rational,
     },
     42035: {
-      name: "LensMake",
+      name: 'LensMake',
       type: Types.Ascii,
     },
     42036: {
-      name: "LensModel",
+      name: 'LensModel',
       type: Types.Ascii,
     },
     42037: {
-      name: "LensSerialNumber",
+      name: 'LensSerialNumber',
       type: Types.Ascii,
     },
     42240: {
-      name: "Gamma",
+      name: 'Gamma',
       type: Types.Rational,
     },
   },
   GPS: {
     0: {
-      name: "GPSVersionID",
+      name: 'GPSVersionID',
       type: Types.Byte,
     },
     1: {
-      name: "GPSLatitudeRef",
+      name: 'GPSLatitudeRef',
       type: Types.Ascii,
     },
     2: {
-      name: "GPSLatitude",
+      name: 'GPSLatitude',
       type: Types.Rational,
     },
     3: {
-      name: "GPSLongitudeRef",
+      name: 'GPSLongitudeRef',
       type: Types.Ascii,
     },
     4: {
-      name: "GPSLongitude",
+      name: 'GPSLongitude',
       type: Types.Rational,
     },
     5: {
-      name: "GPSAltitudeRef",
+      name: 'GPSAltitudeRef',
       type: Types.Byte,
     },
     6: {
-      name: "GPSAltitude",
+      name: 'GPSAltitude',
       type: Types.Rational,
     },
     7: {
-      name: "GPSTimeStamp",
+      name: 'GPSTimeStamp',
       type: Types.Rational,
     },
     8: {
-      name: "GPSSatellites",
+      name: 'GPSSatellites',
       type: Types.Ascii,
     },
     9: {
-      name: "GPSStatus",
+      name: 'GPSStatus',
       type: Types.Ascii,
     },
     10: {
-      name: "GPSMeasureMode",
+      name: 'GPSMeasureMode',
       type: Types.Ascii,
     },
     11: {
-      name: "GPSDOP",
+      name: 'GPSDOP',
       type: Types.Rational,
     },
     12: {
-      name: "GPSSpeedRef",
+      name: 'GPSSpeedRef',
       type: Types.Ascii,
     },
     13: {
-      name: "GPSSpeed",
+      name: 'GPSSpeed',
       type: Types.Rational,
     },
     14: {
-      name: "GPSTrackRef",
+      name: 'GPSTrackRef',
       type: Types.Ascii,
     },
     15: {
-      name: "GPSTrack",
+      name: 'GPSTrack',
       type: Types.Rational,
     },
     16: {
-      name: "GPSImgDirectionRef",
+      name: 'GPSImgDirectionRef',
       type: Types.Ascii,
     },
     17: {
-      name: "GPSImgDirection",
+      name: 'GPSImgDirection',
       type: Types.Rational,
     },
     18: {
-      name: "GPSMapDatum",
+      name: 'GPSMapDatum',
       type: Types.Ascii,
     },
     19: {
-      name: "GPSDestLatitudeRef",
+      name: 'GPSDestLatitudeRef',
       type: Types.Ascii,
     },
     20: {
-      name: "GPSDestLatitude",
+      name: 'GPSDestLatitude',
       type: Types.Rational,
     },
     21: {
-      name: "GPSDestLongitudeRef",
+      name: 'GPSDestLongitudeRef',
       type: Types.Ascii,
     },
     22: {
-      name: "GPSDestLongitude",
+      name: 'GPSDestLongitude',
       type: Types.Rational,
     },
     23: {
-      name: "GPSDestBearingRef",
+      name: 'GPSDestBearingRef',
       type: Types.Ascii,
     },
     24: {
-      name: "GPSDestBearing",
+      name: 'GPSDestBearing',
       type: Types.Rational,
     },
     25: {
-      name: "GPSDestDistanceRef",
+      name: 'GPSDestDistanceRef',
       type: Types.Ascii,
     },
     26: {
-      name: "GPSDestDistance",
+      name: 'GPSDestDistance',
       type: Types.Rational,
     },
     27: {
-      name: "GPSProcessingMethod",
+      name: 'GPSProcessingMethod',
       type: Types.Undefined,
     },
     28: {
-      name: "GPSAreaInformation",
+      name: 'GPSAreaInformation',
       type: Types.Undefined,
     },
     29: {
-      name: "GPSDateStamp",
+      name: 'GPSDateStamp',
       type: Types.Ascii,
     },
     30: {
-      name: "GPSDifferential",
+      name: 'GPSDifferential',
       type: Types.Short,
     },
     31: {
-      name: "GPSHPositioningError",
+      name: 'GPSHPositioningError',
       type: Types.Rational,
     },
   },
   Interop: {
     1: {
-      name: "InteroperabilityIndex",
+      name: 'InteroperabilityIndex',
       type: Types.Ascii,
     },
   },
-};
+}
 
 export const TagNumbers: ITagNumbers = {
   ImageIFD: {
@@ -1455,4 +1455,4 @@ export const TagNumbers: ITagNumbers = {
   InteropIFD: {
     InteroperabilityIndex: 1,
   },
-};
+}
